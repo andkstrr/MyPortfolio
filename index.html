@@ -14,6 +14,7 @@
     <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="responsive.css">
     <link rel="website icon" type="png" href="assets/logo web.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -50,7 +51,11 @@
         <div class="about-text">
             <h2>About Me</h2>
             <h5>I am a student of <span>Wiyata Krida Manggala</span> Vocational High School</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa animi similique incidunt minus accusantium, repudiandae explicabo temporibus quos unde aspernatur quisquam saepe beatae asperiores ea, eum ut. Ab, autem sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae vitae sapiente tempore quia nobis. Inventore dolorum, eos dolore, minima modi numquam quod vero similique possimus voluptas provident optio iure et.
+            <p>
+            Fokus pada web
+            development. Tujuan saya adalah menjadi
+            seorang pengembang yang berkontribusi dalam
+            menciptakan solusi inovatif melalui pemrograman.
             </p>
             <a href="#contact" class="btn">Contact Me</a>
         </div>
@@ -60,75 +65,85 @@
 
     <section class="skills" id="skills">
         <div class="top-text">
-            <h2>My Skills</h2>
+            <h2 data-aos="fade-up">My Skills</h2>
             <h4>Still Learning</h4>
         </div>
 
         <div class="skills-item">
             <div class="skills-box">
                 <i class="bx bx-mobile-alt"></i>
-                <h3>Web Design</h3>
+                <h3>Design</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa alias perferendis error dolorem, voluptatem delectus, velit sequi doloribus illum blanditiis fuga laborum? Tenetur ullam iure voluptate nulla dolorum architecto!</p>
             </div>
             <div class="skills-box">
                 <i class="bx bx-signal-5"></i>
-                <h3>Software Engineer</h3>
+                <h3>Algorithm</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa alias perferendis error dolorem, voluptatem delectus, velit sequi doloribus illum blanditiis fuga laborum? Tenetur ullam iure voluptate nulla dolorum architecto!</p>
             </div>
             <div class="skills-box">
                 <i class="bx bx-code-alt"></i>
-                <h3>Web Development</h3>
+                <h3>Coding</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa alias perferendis error dolorem, voluptatem delectus, velit sequi doloribus illum blanditiis fuga laborum? Tenetur ullam iure voluptate nulla dolorum architecto!</p>
             </div>
         </div>
     </section>
 
-    <!--portfolio-->
-
-    <!--contact-->
-
-    <section class="contact" id="contact">
-        <div class="left-contact">
-            <div class="in">
-                <i class="bx bx-code-alt"></i>
-                <h4>Code</h4>
+    <!--portfolio carousel-->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-container">
+            <h2 data-aos="fade-up">My Projects</h2>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="assets/dataSiswa.png" alt="Project 1">
+                    <img src="assets/dataKasir.png" alt="Project 2">
+                    <img src="assets/perpusOnline.png" alt="Project 3">
+                </div>
+                <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="next" onclick="moveCarousel(1)">&#10095;</button>
             </div>
-            <div class="in" id="eat">
-                <i class='bx bx-bowl-hot'></i>
-                <h4>Eat</h4>
-            </div>
-            <div class="in">
-                <i class='bx bx-bed' ></i>
-                <h4>Sleep</h4>
-            </div>
-            <div class="in" id="repeat">
-                <i class='bx bx-repeat' ></i>
-                <h4>Repeat</h4>
-            </div>
-
-            <div class="right-contact">
-                <h2>Profiles</h2>
-                <p>A programmer is someone whose job is to create software or computer applications by designing special programming code instructions. <br>
-
-                A programmer should have a computing background and extensive coding knowledge across a variety of programming languages ​​and platforms, including Structured Query Language (SQL), Perl, PHP, HTML, C, C++, and Java. <br>
-                
-                This profession also has certain specializations in the computing field, such as databases, security, or software/firmware/mobile/web development.</p>
-                <a href="https://www.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F">Hire Me</a>
+            <div class="project-links">
+                <a id="project-link" href="http://portdk.rf.gd/dataSiswa/" target="_blank" class="btn">View Live Demo</a>
             </div>
         </div>
     </section>
 
-    <!--end-->
 
-    <section class="end">
+    <!--contact-->
+
+    <section class="end" id="contact">
         <h3>Andika Satrio N.</h3>
         <p>Wikrama Vocational High School</p>
         <div class="end-icon">
             <a href="https://www.instagram.com/andkstrr_/"><i class='bx bxl-instagram' ></i></a>
             <a href="https://wa.me/?6289522944786"><i class='bx bxl-whatsapp'></i></a>
-            <a href="https://web.facebook.com/"><i class='bx bxl-facebook' ></i></a>
-            <a href="https://www.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://www.linkedin.com/andkstrr/"><i class='bx bxl-linkedin' ></i></a>
         </div>
     </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        // Carousel functionality
+        let currentIndex = 0;
+        const projectLinks = [
+            "http://portdk.rf.gd/dataSiswa/",
+            "http://portdk.rf.gd/dataKasir/",
+            "http://portdk.rf.gd/bookLibrary/"
+        ];
+
+        function moveCarousel(direction) {
+            const carousel = document.querySelector('.carousel-images');
+            const totalImages = carousel.children.length;
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            const newTransform = -currentIndex * 100;
+            carousel.style.transform = `translateX(${newTransform}%)`;
+
+            // Update project link based on current image
+            const projectLinkElement = document.getElementById('project-link');
+            projectLinkElement.href = projectLinks[currentIndex];
+        }
+    </script>
 </body>
 </html>
